@@ -17,9 +17,10 @@ const AddSpot = () => {
         const average_cost = form.average_cost.value;
         const seasonality = form.seasonality.value;
         const travel_time = form.travel_time.value;
+        const totalVisitorsPerYear = form.totalVisitorsPerYear.value;
         const image = form.image.value;
 
-        const newSpot = { name, email, country_Name, tourists_spot_name, location, short_description, average_cost, seasonality, travel_time, image }
+        const newSpot = { name, email, country_Name, tourists_spot_name, location, short_description, average_cost, seasonality, travel_time, totalVisitorsPerYear, image }
         console.log(newSpot)
 
         fetch('http://localhost:5000/tours', {
@@ -29,18 +30,18 @@ const AddSpot = () => {
             },
             body: JSON.stringify(newSpot)
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            if(data.insertedId){
-                Swal.fire({
-                    title: 'Success',
-                    text: 'Added the Tourist Spot Successfully',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                  })
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success',
+                        text: 'Added the Tourist Spot Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
     }
 
 
@@ -53,7 +54,7 @@ const AddSpot = () => {
 
             <div className="bg-[#F4F3F0] p-10">
                 <h2 className="text-5xl font-bold font-sedan mb-10 text-center">Add Tourist Spot</h2>
-                <form onSubmit={handleAddSpot} className="border-2 p-14 bg-white shadow-xl">
+                <form onSubmit={handleAddSpot} className="border-2 p-14 bg-white shadow-xl rounded-xl">
 
 
                     {/* Row 1 */}
@@ -83,12 +84,12 @@ const AddSpot = () => {
                     <div className="md:flex mb-8 gap-5">
 
                         <div className="form-control md:w-1/2">
-                            <label className="label">
-                                <span className="label-text">Country</span>
-                            </label>
-                            <label className="select select-bordered w-full">
-                                <select name="country_Name">
-                                    <option value="">Select Country</option>
+                            <label className="form-control w-full">
+                                <div className="label">
+                                    <span className="label-text-alt">Country</span>
+                                </div>
+                                <select name="country_Name" className="select select-bordered">
+                                    <option disabled selected>Select Country</option>
                                     <option value="Jordan">Jordan</option>
                                     <option value="Saudi Arabia">Saudi Arabia</option>
                                     <option value="United Arab Emirates">United Arab Emirates</option>
@@ -170,13 +171,25 @@ const AddSpot = () => {
 
                         <div className="form-control md:w-1/2">
                             <label className="label">
+                                <span className="label-text">Total Visitors Per Year</span>
+                            </label>
+                            <label className="input-group">
+                                <input type="text" name="totalVisitorsPerYear" placeholder="Total Visitors Per Year" className="input input-bordered w-full" />
+                            </label>
+                        </div>
+
+                    </div>
+
+                    {/* Row 6 */}
+                    <div className="mb-8">
+                        <div className="form-control w-full">
+                            <label className="label">
                                 <span className="label-text">Image URL</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="image" placeholder="Image URL" className="input input-bordered w-full" />
                             </label>
                         </div>
-
                     </div>
 
 

@@ -5,8 +5,6 @@ const Navbar = () => {
     const links = <>
         <li><NavLink to="/" className={({ isActive }) =>
             isActive ? 'text-black border-2 border-[#5c4d16]' : 'text-black'}>Home</NavLink></li>
-        <li><NavLink to="/touristSpot" className={({ isActive }) =>
-            isActive ? 'text-black border-2 border-[#5c4d16]' : 'text-black'}>Tourist Spots</NavLink></li>
         <li><NavLink to="/aboutUs" className={({ isActive }) =>
             isActive ? 'text-black border-2 border-[#5c4d16]' : 'text-black'}>About</NavLink></li>
         <li><NavLink to="/contact" className={({ isActive }) =>
