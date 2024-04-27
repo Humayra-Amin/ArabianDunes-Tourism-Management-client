@@ -1,6 +1,49 @@
 import { Helmet } from "react-helmet-async";
+import Swal from 'sweetalert2';
 
 const AddSpot = () => {
+
+    const handleAddSpot = event => {
+        event.preventDefault();
+
+        const form = event.target;
+
+        const name = form.name.value;
+        const email = form.email.value;
+        const country_Name = form.country_Name.value;
+        const tourists_spot_name = form.tourists_spot_name.value;
+        const location = form.location.value;
+        const short_description = form.short_description.value;
+        const average_cost = form.average_cost.value;
+        const seasonality = form.seasonality.value;
+        const travel_time = form.travel_time.value;
+        const image = form.image.value;
+
+        const newSpot = { name, email, country_Name, tourists_spot_name, location, short_description, average_cost, seasonality, travel_time, image }
+        console.log(newSpot)
+
+        fetch('http://localhost:5000/tours', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newSpot)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success',
+                    text: 'Added the Tourist Spot Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+            }
+        })
+    }
+
+
     return (
         <div>
             <Helmet>
@@ -10,9 +53,9 @@ const AddSpot = () => {
 
             <div className="bg-[#F4F3F0] p-10">
                 <h2 className="text-5xl font-bold font-sedan mb-10 text-center">Add Tourist Spot</h2>
-                <form className="border-2 p-14 bg-white">
+                <form onSubmit={handleAddSpot} className="border-2 p-14 bg-white shadow-xl">
 
-                    
+
                     {/* Row 1 */}
                     <div className="md:flex mb-8 gap-5">
 
@@ -39,22 +82,22 @@ const AddSpot = () => {
                     {/* Row 2 */}
                     <div className="md:flex mb-8 gap-5">
 
-                    <div className="form-control md:w-1/2">
-                    <label className="label">
-                        <span className="label-text">Country</span>
-                    </label>
-                    <label className="select select-bordered w-full">
-                        <select>
-                            <option value="">Select Country</option>
-                            <option value="Jordan">Jordan</option>
-                            <option value="Saudi Arabia">Saudi Arabia</option>
-                            <option value="United Arab Emirates">United Arab Emirates</option>
-                            <option value="Kuwait">Kuwait</option>
-                            <option value="Qatar">Qatar</option>
-                            <option value="Iran">Iran</option>
-                        </select>
-                    </label>
-                </div>
+                        <div className="form-control md:w-1/2">
+                            <label className="label">
+                                <span className="label-text">Country</span>
+                            </label>
+                            <label className="select select-bordered w-full">
+                                <select name="country_Name">
+                                    <option value="">Select Country</option>
+                                    <option value="Jordan">Jordan</option>
+                                    <option value="Saudi Arabia">Saudi Arabia</option>
+                                    <option value="United Arab Emirates">United Arab Emirates</option>
+                                    <option value="Kuwait">Kuwait</option>
+                                    <option value="Qatar">Qatar</option>
+                                    <option value="Iran">Iran</option>
+                                </select>
+                            </label>
+                        </div>
 
                         <div className="form-control md:w-1/2">
                             <label className="label">
