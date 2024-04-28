@@ -15,6 +15,7 @@ import Register from './components/Register/Register';
 import { HelmetProvider } from 'react-helmet-async';
 import SpotDetails from './components/SpotDetails/SpotDetails';
 import AboutUs from './components/AboutUs/AboutUs';
+import Contact from './components/Contact/Contact';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: '/aboutUs',
         element: <AboutUs></AboutUs>,
+      },
+      {
+        path: '/contact',
+        element: <Contact></Contact>,
       },
       {
         path: '/tours/:_id',

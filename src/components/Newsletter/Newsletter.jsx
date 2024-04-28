@@ -1,5 +1,5 @@
-import new1 from '../../assets/images/new1.png';
-import new2 from '../../assets/images/new2.png';
+// import new1 from '../../assets/images/new1.png';
+// import new2 from '../../assets/images/new2.png';
 
 const Newsletter = () => {
     return (

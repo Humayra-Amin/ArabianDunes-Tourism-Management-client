@@ -17,7 +17,7 @@ const AboutUs = () => {
                     <div className="hero-overlay bg-opacity-30"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="">
-                        <h2 className="text-4xl lg:text-7xl font-sedan font-semibold lg:p-4 text-black">About Us</h2>
+                        <h2 className="text-4xl md:text-7xl lg:text-7xl font-sedan font-semibold lg:p-4 text-black">About Us</h2>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ const AboutUs = () => {
                 <div className="card lg:card-side bg-amber-200 shadow-lg border-2 mt-14">
                     <div className="card-body text-start">
                         <h2 className="text-3xl font-bold text-center font-sedan">Our Mission and Vision</h2>
-                        <p className="text-[16px] md:text-xl lg:text-xl font-sedan">At ArabianDunes Tourism Management, our mission is to inspire discovery and foster a deep appreciation for the beauty and diversity of the Middle East. We are dedicated to empowering travelers to embark on transformative journeys that immerse them in the region's rich history, breathtaking landscapes, and vibrant cultures.</p>
+                        <p className="text-[16px] md:text-xl lg:text-xl font-sedan">At ArabianDunes Tourism Management, our mission is to inspire discovery and foster a deep appreciation for the beauty and diversity of the Middle East. We are dedicated to empowering travelers to embark on transformative journeys that immerse them in the regions rich history, breathtaking landscapes, and vibrant cultures.</p>
                         <p className="text-[16px] md:text-xl lg:text-xl font-sedan">Our vision is to be the leading provider of authentic and enriching travel experiences, known for our commitment to sustainability, cultural preservation, and exceptional service. By continually innovating and adapting to the evolving needs of our travelers, we strive to set new standards of excellence in the tourism industry, while preserving the natural beauty and heritage of the Middle East for generations to come.</p>
                         <p className="text-[16px] md:text-xl lg:text-xl font-sedan">With a focus on innovation and continuous improvement, we are committed to staying ahead of the curve and adapting to the evolving needs of our clients. Our goal is to remain a trusted advisor and partner to our clients, providing them with the guidance and support they need.</p>
                     </div>
@@ -49,8 +49,8 @@ const AboutUs = () => {
                     <figure><img src={pics3} alt="Album" className="h-[200px] md:h-[500px] lg:w-[2500px] lg:h-[550px]" /></figure>
                     <div className="card-body text-start">
                         <h2 className="text-3xl font-bold text-center font-sedan">Our Philosophy</h2>
-                        <p className="text-[16px] md:text-xl lg:text-xl font-sedan">At ArabianDunes Tourism Management, we believe that travel is not just about visiting destinations; it's about forging meaningful connections, fostering cultural exchange, and creating lasting memories. We are committed to offering more than just tours; we curate immersive experiences that celebrate the essence of the Middle East, allowing travelers to delve deep into its history, traditions, and way of life.</p>
-                        <p className="text-[16px] md:text-xl lg:text-xl font-sedan">Our philosophy is rooted in authenticity, integrity, and respect for both our travelers and the communities we visit. By prioritizing responsible tourism practices and engaging with local partners, we aim to create positive social and economic impacts while ensuring the preservation of the region's natural and cultural heritage. With a passion for excellence and a dedication to service, we invite you to embark on a journey of discovery with ArabianDunes, where every moment is an adventure.</p>
+                        <p className="text-[16px] md:text-xl lg:text-xl font-sedan">At ArabianDunes Tourism Management, we believe that travel is not just about visiting destinations; its about forging meaningful connections, fostering cultural exchange, and creating lasting memories. We are committed to offering more than just tours; we curate immersive experiences that celebrate the essence of the Middle East, allowing travelers to delve deep into its history, traditions, and way of life.</p>
+                        <p className="text-[16px] md:text-xl lg:text-xl font-sedan">Our philosophy is rooted in authenticity, integrity, and respect for both our travelers and the communities we visit. By prioritizing responsible tourism practices and engaging with local partners, we aim to create positive social and economic impacts while ensuring the preservation of the regions natural and cultural heritage. With a passion for excellence and a dedication to service, we invite you to embark on a journey of discovery with ArabianDunes, where every moment is an adventure.</p>
                         <p className="text-[16px] md:text-xl lg:text-xl font-sedan">With a passion for excellence and a dedication to service, we are proud to be your trusted partner.</p>
                     </div>
                 </div>
