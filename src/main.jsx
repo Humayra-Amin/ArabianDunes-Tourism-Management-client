@@ -13,6 +13,8 @@ import AddSpot from './components/AddSpot/AddSpot';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import { HelmetProvider } from 'react-helmet-async';
+import SpotDetails from './components/SpotDetails/SpotDetails';
+import AboutUs from './components/AboutUs/AboutUs';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,15 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>,
+      },
+      {
+        path: '/aboutUs',
+        element: <AboutUs></AboutUs>,
+      },
+      {
+        path: '/tours/:_id',
+        element: <SpotDetails></SpotDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/tours/${params._id}`)
       },
     ]
   },

@@ -2,12 +2,14 @@ import { Helmet } from "react-helmet-async";
 import Banner from "../Banner/Banner";
 import TouristSpot from "../TouristSpot/TouristSpot";
 import { useLoaderData } from "react-router-dom";
+import About from "../About/About";
+import Newsletter from "../Newsletter/Newsletter";
 
 
 const Home = () => {
     const tour = useLoaderData();
     return (
-        <div>
+        <div style={{ background: 'linear-gradient(to bottom right, #FFFFFF, #FFFCB3)' }}>
             <Banner></Banner>
             <div>
             <div className="text-center my-16">
@@ -20,6 +22,9 @@ const Home = () => {
                 }
             </div>
             </div>
+            <About></About>
+
+            <Newsletter></Newsletter>
 
             <Helmet>
                 <title>ArabianDunes | Home</title>
