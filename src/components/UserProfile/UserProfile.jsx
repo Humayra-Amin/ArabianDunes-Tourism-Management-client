@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import logout from "../../assets/images/logout.png"
 
 const UserProfile = () => {
 
@@ -26,8 +27,18 @@ const UserProfile = () => {
 
 
     return (
-        <div>
-            <h1 className="text-3xl md:text-4xl font-bold text-center font-roboto border-2 lg:p-4 bg-blue-400 text-white mt-[55px]">User Information</h1>
+        <div className="min-h-screen">
+
+            <div>
+                <div className="hero h-[400px] object-contain" style={{ backgroundImage: 'url(https://static.vecteezy.com/system/resources/thumbnails/039/035/354/small_2x/sign-of-log-in-log-out-sign-in-and-sign-out-on-yellow-background-photo.jpg'}}>
+                    <div className="hero-overlay bg-opacity-10"></div>
+                    <div className="hero-content text-center text-neutral-content">
+                        <div className="">
+                        <h1 className="text-4xl md:text-5xl lg:text-7xl text-black font-bold text-center font-sedan mt-[55px] md:mt-[100px] lg:mt-[100px]">User Information</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <Helmet>
                 <title>ArabianDunes | User Profile</title>
@@ -50,12 +61,21 @@ const UserProfile = () => {
 
                 ) : (
 
-                    <div>
-                        <h1 className="font-roboto text-2xl mt-20 text-black bg-red-400 p-4">Profile Logged Out</h1>
+                    <div className="border-2 border-amber-600 bg-amber-200 lg:p-6 mt-6 lg:w-[500px] lg:ml-[330px]">
+                        
+                        <h1 className="font-sedan text-2xl text-black">You have been logged out</h1>
+                        <p className="text-slate-400">Please login</p>
 
-                        <button className="mt-10"><Link to="/" className="btn-ghost bg-gray-400 text-black font-medium text-xl text-center rounded-xl p-2 font-sedan">Go Back Home</Link></button>
+                        <img src={logout} alt="" className="h-[150px] ml-[100px] md:h-[200px] md:ml-[250px] lg:h-[200px] lg:ml-[150px]" />
+                       
+                        <div>
 
-                        <button className="mt-10"><Link to="/login" className="btn-ghost bg-blue-400 text-black font-medium text-xl text-center ml-[80px] lg:ml-[180px] rounded-xl p-2 font-sedan">Go To Login Page</Link></button>
+                        <button className="mt-10 mb-10"><Link to="/" className="btn-ghost bg-amber-300 border border-amber-600 text-black font-medium text-xl text-center rounded-xl p-2 font-sedan">Home</Link></button>
+
+                        <button className="mt-10"><Link to="/login" className="btn-ghost bg-[#FACF39] border border-amber-600 text-black font-medium text-xl text-center ml-[80px] lg:ml-[180px] rounded-xl p-2 font-sedan">Login Page</Link></button>
+
+                        </div>
+
                     </div>
 
                 )}
