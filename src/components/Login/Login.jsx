@@ -1,16 +1,17 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { FaEnvelope, FaLock } from "react-icons/fa";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 
 const Login = () => {
     return (
-        <div>
+        <div style={{ background: 'linear-gradient(to bottom right, #FFFFFF, #FFFCB3)' }}>
             <Helmet>
                 <title>ArabianDunes | Login</title>
                 <link rel="icon" type="image/jpg" href="/src/assets/images/logos.jpg" />
             </Helmet>
-            <div className="hero min-h-screen bg-[#f8f8f8]">
+            <div className="hero min-h-screen">
                 <div className="hero-content">
                     <div className="card shrink-0 mb-14 md:w-[500px] lg:w-[500px] border-2 bg-base-100 shadow-xl">
 
@@ -61,6 +62,8 @@ const Login = () => {
                             <label className="label text-[16px] font-medium text-gray-400">
                                 Don’t have an account? <Link to="/register" className="label-text-alt link link-hover text-xl font-medium text-blue-600 underline font-sedan">Sign Up</Link>
                             </label>
+
+                            <SocialLogin></SocialLogin>
 
                         </form>
 

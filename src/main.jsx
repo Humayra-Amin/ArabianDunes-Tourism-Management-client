@@ -16,6 +16,9 @@ import { HelmetProvider } from 'react-helmet-async';
 import SpotDetails from './components/SpotDetails/SpotDetails';
 import AboutUs from './components/AboutUs/AboutUs';
 import Contact from './components/Contact/Contact';
+import MyList from './components/MyList/MyList';
+import AuthProvider from './AuthProvider/AuthProvider';
+import UserProfile from './components/UserProfile/UserProfile';
 
 const router = createBrowserRouter([
   {
@@ -49,9 +52,17 @@ const router = createBrowserRouter([
         element: <Contact></Contact>,
       },
       {
+        path: '/list',
+        element: <MyList></MyList>,
+      },
+      {
         path: '/tours/:_id',
         element: <SpotDetails></SpotDetails>,
         loader: ({params}) => fetch(`http://localhost:5000/tours/${params._id}`)
+      },
+      {
+        path: '/userprofile',
+        element: <UserProfile></UserProfile>,
       },
     ]
   },
@@ -60,7 +71,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
+    <AuthProvider>
     <RouterProvider router={router} />
+    </AuthProvider>
     </HelmetProvider>
   </React.StrictMode>
 )

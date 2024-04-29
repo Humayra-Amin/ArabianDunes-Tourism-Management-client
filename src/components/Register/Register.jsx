@@ -1,15 +1,16 @@
 import { Helmet } from "react-helmet-async";
 import { FaEnvelope, FaLink, FaLock, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Register = () => {
     return (
-        <div>
+        <div style={{ background: 'linear-gradient(to bottom right, #FFFFFF, #FFFCB3)' }}>
             <Helmet>
                 <title>ArabianDunes | Register</title>
                 <link rel="icon" type="image/jpg" href="/src/assets/images/logos.jpg" />
             </Helmet>
-            <div className="hero min-h-screen bg-[#f8f8f8]">
+            <div className="hero min-h-screen">
                 <div className="hero-content">
                     <div className="card shrink-0 mb-14 md:w-[500px] lg:w-[500px] border-2 bg-base-100 shadow-xl">
 
@@ -72,8 +73,6 @@ const Register = () => {
                                         placeholder="password"
                                         className="input input-bordered pl-10 w-full" />
 
-                                    
-
                                     <FaLock className="absolute top-1/2 left-3 transform -translate-y-1/2 h-6 text-[#FACF39]"></FaLock>
 
                                 </div>
@@ -87,6 +86,8 @@ const Register = () => {
                             <label className="label text-[16px] font-medium text-gray-400">
                                 Have an account? <Link to="/login" className="label-text-alt link link-hover text-xl font-medium text-blue-600 underline font-sedan">Login</Link>
                             </label>
+
+                            <SocialLogin></SocialLogin>
 
                         </form>
 
