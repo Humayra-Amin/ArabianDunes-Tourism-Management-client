@@ -16,12 +16,12 @@ import { HelmetProvider } from 'react-helmet-async';
 import SpotDetails from './components/SpotDetails/SpotDetails';
 import AboutUs from './components/AboutUs/AboutUs';
 import Contact from './components/Contact/Contact';
-import MyList from './components/MyList/MyList';
 import AuthProvider from './AuthProvider/AuthProvider';
 import UserProfile from './components/UserProfile/UserProfile';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import UpdateSpot from './components/UpdateSpot/UpdateSpot';
 import AllSpot from './components/AllSpot/AllSpot';
+import MyList from './components/MyList/MyList';
 
 const router = createBrowserRouter([
   {
@@ -69,9 +69,11 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/tours')
       },
       {
-        path: '/list',
-        element: <MyList></MyList>,
-        loader: () => fetch('http://localhost:5000/tours')
+        path: '/list/:email',
+        element: <ProtectedRoute>
+          <MyList></MyList>,
+        </ProtectedRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/myTour/${params.email}`)
       },
       {
         path: '/tours/:_id',

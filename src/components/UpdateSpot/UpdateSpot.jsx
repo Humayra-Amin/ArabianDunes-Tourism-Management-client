@@ -65,29 +65,6 @@ const UpdateSpot = () => {
                     <div className="md:flex mb-8 gap-5">
 
                         <div className="form-control md:w-1/2">
-                            <label className="label">
-                                <span className="label-text">Name</span>
-                            </label>
-                            <label className="input-group">
-                                <input type="text" name="name" defaultValue={name}placeholder="Name" className="input input-bordered w-full" />
-                            </label>
-                        </div>
-
-                        <div className="form-control md:w-1/2">
-                            <label className="label">
-                                <span className="label-text">Email</span>
-                            </label>
-                            <label className="input-group">
-                                <input type="text" name="email" defaultValue={email} placeholder="Email" className="input input-bordered w-full" />
-                            </label>
-                        </div>
-
-                    </div>
-
-                    {/* Row 2 */}
-                    <div className="md:flex mb-8 gap-5">
-
-                        <div className="form-control md:w-1/2">
                             <label className="form-control w-full">
                                 <div className="label">
                                     <span className="label-text-alt">Country</span>
@@ -115,7 +92,7 @@ const UpdateSpot = () => {
 
                     </div>
 
-                    {/* Row 3 */}
+                    {/* Row 2 */}
                     <div className="md:flex mb-8 gap-5">
 
                         <div className="form-control md:w-1/2">
@@ -138,7 +115,7 @@ const UpdateSpot = () => {
 
                     </div>
 
-                    {/* Row 4 */}
+                    {/* Row 3 */}
                     <div className="md:flex mb-8 gap-5">
 
                         <div className="form-control md:w-1/2">
@@ -161,7 +138,7 @@ const UpdateSpot = () => {
 
                     </div>
 
-                    {/* Row 5 */}
+                    {/* Row 4 */}
                     <div className="md:flex mb-8 gap-5">
 
                         <div className="form-control md:w-1/2">
@@ -184,7 +161,7 @@ const UpdateSpot = () => {
 
                     </div>
 
-                    {/* Row 6 */}
+                    {/* Row 5 */}
                     <div className="mb-8">
                         <div className="form-control w-full">
                             <label className="label">

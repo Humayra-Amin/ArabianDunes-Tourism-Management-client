@@ -17,7 +17,7 @@ const Navbar = () => {
             isActive ? 'text-black border-2 border-[#5c4d16]' : 'text-black'}>All Tourist Spot</NavLink></li>
         <li><NavLink to="/addSpot" className={({ isActive }) =>
             isActive ? 'text-black border-2 border-[#5c4d16]' : 'text-black'}>Add Tourists Spot</NavLink></li>
-        <li><NavLink to="/list" className={({ isActive }) =>
+        <li><NavLink to={`/list/${user?.email}`} className={({ isActive }) =>
             isActive ? 'text-black border-2 border-[#5c4d16]' : 'text-black'}>My List</NavLink></li>
         {user && <li><NavLink to="/userprofile" className={({ isActive }) =>
             isActive ? 'text-black border-2 border-[#5c4d16]' : 'text-black'}>User Profile</NavLink></li>}

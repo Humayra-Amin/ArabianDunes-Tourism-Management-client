@@ -1,15 +1,19 @@
 import { Helmet } from "react-helmet-async";
 import Swal from 'sweetalert2';
+import useAuth from "../../hooks/useAuth";
 
 const AddSpot = () => {
+
+    const { user } = useAuth();
+
 
     const handleAddSpot = event => {
         event.preventDefault();
 
         const form = event.target;
 
-        const name = form.name.value;
-        const email = form.email.value;
+        const name = user?.displayName;
+        const email = user?.email;
         const country_Name = form.country_Name.value;
         const tourists_spot_name = form.tourists_spot_name.value;
         const location = form.location.value;
@@ -58,29 +62,7 @@ const AddSpot = () => {
 
 
                     {/* Row 1 */}
-                    <div className="md:flex mb-8 gap-5">
 
-                        <div className="form-control md:w-1/2">
-                            <label className="label">
-                                <span className="label-text">Name</span>
-                            </label>
-                            <label className="input-group">
-                                <input type="text" name="name" placeholder="Name" className="input input-bordered w-full" />
-                            </label>
-                        </div>
-
-                        <div className="form-control md:w-1/2">
-                            <label className="label">
-                                <span className="label-text">Email</span>
-                            </label>
-                            <label className="input-group">
-                                <input type="text" name="email" placeholder="Email" className="input input-bordered w-full" />
-                            </label>
-                        </div>
-
-                    </div>
-
-                    {/* Row 2 */}
                     <div className="md:flex mb-8 gap-5">
 
                         <div className="form-control md:w-1/2">
@@ -111,7 +93,7 @@ const AddSpot = () => {
 
                     </div>
 
-                    {/* Row 3 */}
+                    {/* Row 2 */}
                     <div className="md:flex mb-8 gap-5">
 
                         <div className="form-control md:w-1/2">
@@ -134,7 +116,7 @@ const AddSpot = () => {
 
                     </div>
 
-                    {/* Row 4 */}
+                    {/* Row 3 */}
                     <div className="md:flex mb-8 gap-5">
 
                         <div className="form-control md:w-1/2">
@@ -157,7 +139,7 @@ const AddSpot = () => {
 
                     </div>
 
-                    {/* Row 5 */}
+                    {/* Row 4 */}
                     <div className="md:flex mb-8 gap-5">
 
                         <div className="form-control md:w-1/2">
@@ -180,7 +162,7 @@ const AddSpot = () => {
 
                     </div>
 
-                    {/* Row 6 */}
+                    {/* Row 5 */}
                     <div className="mb-8">
                         <div className="form-control w-full">
                             <label className="label">
