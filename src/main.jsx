@@ -20,7 +20,8 @@ import MyList from './components/MyList/MyList';
 import AuthProvider from './AuthProvider/AuthProvider';
 import UserProfile from './components/UserProfile/UserProfile';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
-// import AllSpot from './components/AllSpot/AllSpot';
+import UpdateSpot from './components/UpdateSpot/UpdateSpot';
+import AllSpot from './components/AllSpot/AllSpot';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
         </ProtectedRoute>,
       },
       {
+        path: '/updateSpot/:_id',
+        element: <UpdateSpot></UpdateSpot>,
+        loader: ({params}) => fetch(`http://localhost:5000/${params._id}`)
+      },
+      {
         path: '/login',
         element: <Login></Login>,
       },
@@ -55,14 +61,15 @@ const router = createBrowserRouter([
         path: '/contact',
         element: <Contact></Contact>,
       },
-      // {
-      //   path: '/allSpot',
-      //   element: <AllSpot></AllSpot>,
-      //   loader: ({params}) => fetch(`http://localhost:5000/tours/${params._id}`)
-      // },
+      {
+        path: '/allSpot',
+        element: <AllSpot></AllSpot>,
+        loader: () => fetch('http://localhost:5000/tours')
+      },
       {
         path: '/list',
         element: <MyList></MyList>,
+        loader: () => fetch('http://localhost:5000/tours')
       },
       {
         path: '/tours/:_id',
