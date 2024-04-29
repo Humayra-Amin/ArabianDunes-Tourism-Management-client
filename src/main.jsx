@@ -43,7 +43,7 @@ const router = createBrowserRouter([
       {
         path: '/updateSpot/:_id',
         element: <UpdateSpot></UpdateSpot>,
-        loader: ({params}) => fetch(`http://localhost:5000/${params._id}`)
+        loader: ({params}) => fetch(`http://localhost:5000/tours/${params._id}`)
       },
       {
         path: '/login',

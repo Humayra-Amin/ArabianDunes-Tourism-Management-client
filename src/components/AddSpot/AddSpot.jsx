@@ -54,7 +54,7 @@ const AddSpot = () => {
 
             <div className="bg-[#F4F3F0] p-10">
                 <h2 className="text-5xl font-bold font-sedan mb-10 text-center">Add Tourist Spot</h2>
-                <form onSubmit={handleAddSpot} className="border-2 p-14 bg-white shadow-xl rounded-xl">
+                <form onSubmit={handleAddSpot} className="border-2 border-amber-600 p-14 bg-white shadow-xl rounded-xl">
 
 
                     {/* Row 1 */}

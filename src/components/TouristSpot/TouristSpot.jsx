@@ -33,6 +33,8 @@ const TouristSpot = ({ tours }) => {
                     <Link to={`/tours/${_id}`}>
                         <button className="btn bg-[#FACF39] text-black border-amber-500 hover:bg-white hover:text-black hover:border-amber-300">View Details</button>
                     </Link>
+                    <Link to={`/updateSpot/${_id}`}><button className='btn btn-primary'>update</button></Link>
+
 
                 </div>
             </div>
