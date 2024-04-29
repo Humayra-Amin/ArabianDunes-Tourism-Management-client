@@ -20,7 +20,7 @@ import MyList from './components/MyList/MyList';
 import AuthProvider from './AuthProvider/AuthProvider';
 import UserProfile from './components/UserProfile/UserProfile';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
-import AllSpot from './components/AllSpot/AllSpot';
+// import AllSpot from './components/AllSpot/AllSpot';
 
 const router = createBrowserRouter([
   {
