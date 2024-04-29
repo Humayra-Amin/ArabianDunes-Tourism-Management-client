@@ -1,21 +1,21 @@
-# Website Name:
+# Website Name
 - ArabianDunes Tourism Management
 
-# Live Site URL:
+# Live Site URL
 - firebase url(client): https://tourism-a10-client.web.app/
 - vercel url(server): https://tourism-a10-server.vercel.app/
 
-# Features:
+# Features
 - Discover Exotic Destinations: Explore a curated list of exotic tourist spots around the world.
 - Detailed Spot Information: Each spot card provides detailed information including average cost, total visitors per year, travel time, and seasonality.
 - Sort Functionality: Sort spots based on average cost to find budget-friendly options easily.
 - Interactive Experience: Engage with stunning visuals and immersive descriptions of tourist destinations.
 - User-Friendly Interface: Enjoy a seamless browsing experience with a user-friendly interface designed for easy navigation.
 
-# Category:
+# Category
 Middle East Category
 
-# Sub-category:
+# Sub-category
 - Jordan
 - Saudi Arabia
 - United Arab Emirates
