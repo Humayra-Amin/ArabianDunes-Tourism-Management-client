@@ -19,6 +19,8 @@ import Contact from './components/Contact/Contact';
 import MyList from './components/MyList/MyList';
 import AuthProvider from './AuthProvider/AuthProvider';
 import UserProfile from './components/UserProfile/UserProfile';
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
+import AllSpot from './components/AllSpot/AllSpot';
 
 const router = createBrowserRouter([
   {
@@ -33,7 +35,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/addSpot',
-        element: <AddSpot></AddSpot>,
+        element: <ProtectedRoute>
+          <AddSpot></AddSpot>,
+        </ProtectedRoute>,
       },
       {
         path: '/login',
@@ -51,13 +55,20 @@ const router = createBrowserRouter([
         path: '/contact',
         element: <Contact></Contact>,
       },
+      // {
+      //   path: '/allSpot',
+      //   element: <AllSpot></AllSpot>,
+      //   loader: ({params}) => fetch(`http://localhost:5000/tours/${params._id}`)
+      // },
       {
         path: '/list',
         element: <MyList></MyList>,
       },
       {
         path: '/tours/:_id',
-        element: <SpotDetails></SpotDetails>,
+        element: <ProtectedRoute>
+          <SpotDetails></SpotDetails>,
+        </ProtectedRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/tours/${params._id}`)
       },
       {
