@@ -69,14 +69,6 @@ const Register = () => {
                 <link rel="icon" type="image/jpg" href="/src/assets/images/logos.jpg" />
             </Helmet>
 
-            
-            {
-                registerError && <p className="text-red-500 flex justify-center text-2xl font-sedan bg-red-200 shadow-lg p-6">{registerError}</p>
-            }
-
-            {
-                success && <p className="text-green-500 flex justify-center text-2xl bg-green-200 shadow-lg p-6">{success}</p>
-            }
 
             <div className="hero min-h-screen">
                 <div className="hero-content">
@@ -84,6 +76,14 @@ const Register = () => {
 
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
 
+                            {
+                                registerError && <p className="text-red-500 flex justify-center font-sedan">{registerError}</p>
+                            }
+
+                            {
+                                success && <p className="text-green-500 flex justify-center font-sedan">{success}</p>
+                            }
+                            
                             <h1 className="flex justify-center text-xl lg:text-5xl font-sedan text-black">Register</h1>
 
                             <div className="form-control">

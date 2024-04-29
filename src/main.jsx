@@ -42,7 +42,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/updateSpot/:_id',
-        element: <UpdateSpot></UpdateSpot>,
+        element: <ProtectedRoute>
+          <UpdateSpot></UpdateSpot>,
+        </ProtectedRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/tours/${params._id}`)
       },
       {

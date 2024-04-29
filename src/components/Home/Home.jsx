@@ -4,6 +4,7 @@ import TouristSpot from "../TouristSpot/TouristSpot";
 import { useLoaderData } from "react-router-dom";
 import About from "../About/About";
 import Newsletter from "../Newsletter/Newsletter";
+import Footer from "../Footer/Footer";
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
             </div>
             <About></About>
             <Newsletter></Newsletter>
+            <Footer></Footer>
 
             <Helmet>
                 <title>ArabianDunes | Home</title>

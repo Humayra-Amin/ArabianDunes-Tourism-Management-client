@@ -1,13 +1,24 @@
 import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import TouristSpot from "../TouristSpot/TouristSpot";
+import { useState } from "react";
 
 const AllSpot = () => {
 
     const tour = useLoaderData();
+    const [sortBy, setSortBy] = useState('');
 
-    // const { _id, tourists_spot_name, average_cost, seasonality, travel_time, totalVisitorsPerYear, image } = tours;
+    const handleSortBy = (descOrder) => {
+        setSortBy(descOrder);
+    }
 
+    const sortTours = [...tour];
+
+    if (sortBy === 'totalVisitorsPerYear') {
+        sortTours.sort((a, b) => a.totalVisitorsPerYear - b.totalVisitorsPerYear);
+    }
+
+    
     return (
         <div style={{ background: 'linear-gradient(to bottom right, #FFFFFF, #FFFCB3)' }}>
             <Helmet>
@@ -27,11 +38,19 @@ const AllSpot = () => {
                 </div>
 
             </div>
-
+            
+            <div className="text-center items-center justify-center ">
+                <details className="dropdown">
+                    <summary className="btn bg-amber-400 mt-4 text-black px-6 py-4 m-1 hover:bg-white hover:text-black border-2 hover:border-amber-300">Sort By</summary>
+                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                        <li><button onClick={() => handleSortBy('totalVisitorsPerYear')}>Average Cost</button></li>
+                    </ul>
+                </details>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 mt-10">
                 {
-                    tour.map(tours => <TouristSpot key={tours._id} tours={tours}></TouristSpot>)
+                    sortTours.map(tours => <TouristSpot key={tours._id} tours={tours}></TouristSpot>)
                 }
             </div>
 
