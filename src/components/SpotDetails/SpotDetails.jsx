@@ -1,5 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link, useLoaderData } from "react-router-dom";
+import { Zoom } from "react-awesome-reveal";
+
 
 const SpotDetails = () => {
 
@@ -20,7 +22,9 @@ const SpotDetails = () => {
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="">
-                            <h1 className="mb-5 text-5xl text-white font-extrabold font-sedan">Discover {tourists_spot_name} More Closely</h1>
+                            <Zoom>
+                                <h1 className="mb-5 text-5xl text-white font-extrabold font-sedan">Discover {tourists_spot_name} More Closely</h1>
+                            </Zoom>
                             <p className="mb-5 font-sedan text-lg font-extrabold font-roboto text-white">Immerse yourself in the enchanting allure of the {tourists_spot_name}. From the timeless grandeur of ancient civilizations to the vibrant pulse of modern cities, experience a tapestry of culture, history, and natural wonders.</p>
                             <Link to='/'><button className="btn bg-[#FACF39] border-[#FACF39] text-black text-xl">Go Home</button></Link>
                         </div>
@@ -30,7 +34,7 @@ const SpotDetails = () => {
 
             <div className="container mx-auto w-10/12 lg:w-4/5 font-roboto">
 
-            <h2 className="text-5xl font-bold font-sedan mt-10 text-center">{country_Name}</h2>
+                <h2 className="text-5xl font-bold font-sedan mt-10 text-center">{country_Name}</h2>
 
                 <div className="card lg:card-side mt-14 bg-amber-200 shadow-lg border-2 border-[#FACF39] font-roboto">
 
@@ -46,8 +50,8 @@ const SpotDetails = () => {
 
                         <p className="lg:text-[18px] ml-4 lg:ml-1 mt-4 md:ml-4">{short_description}</p>
 
-                        <hr className="mt-4 lg:w-[650px] border-dashed border border-amber-500" />                        
-                        
+                        <hr className="mt-4 lg:w-[650px] border-dashed border border-amber-500" />
+
                         <p className="lg:text-xl ml-4 mt-4 lg:ml-1 font-bold font-roboto md:ml-4">Travel Time: <span className="font-normal">{travel_time}</span></p>
 
                         <p className="lg:text-xl ml-4 mt-4 lg:ml-1 font-bold font-roboto md:ml-4">Seasonality: <span className="font-normal">{seasonality}</span></p>

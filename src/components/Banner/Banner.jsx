@@ -4,6 +4,8 @@ import banner3 from '../../assets/images/qatar.jpg'
 import banner4 from '../../assets/images/saudi arabia.jpg'
 import banner5 from '../../assets/images/jordan.jpg'
 import banner6 from '../../assets/images/iran.avif'
+import { Zoom } from "react-awesome-reveal";
+
 
 const Banner = () => {
     return (
@@ -15,7 +17,9 @@ const Banner = () => {
                     <img src={banner1} className="w-full lg:h-[630px]" />
 
                     <div className="absolute inset-0 flex flex-col justify-center items-center text-white md:gap-4 lg:gap-8">
-                        <h2 className="text-xl md:text-4xl lg:text-5xl font-bold ml-4 font-sedan">Discover the Wonders of the UAE</h2>
+                        <Zoom>
+                            <h2 className="text-xl md:text-4xl lg:text-5xl font-bold ml-4 font-sedan">Discover the Wonders of the UAE</h2>
+                        </Zoom>
                         <p className="font-roboto text-[12px] md:text-xl lg:text-2xl font-bold ml-2 lg:ml-0 md:ml-0">Explore the vibrant cities and stunning architecture of the UAE</p>
                     </div>
 
@@ -31,7 +35,9 @@ const Banner = () => {
                     <img src={banner2} className="w-full lg:h-[630px]" />
 
                     <div className="absolute inset-0 flex flex-col justify-center items-center text-white md:gap-4 lg:gap-8">
-                        <h2 className="text-xl md:text-4xl lg:text-5xl font-bold ml-4 font-sedan">Experience Kuwait Cultural Charm</h2>
+                        <Zoom>
+                            <h2 className="text-xl md:text-4xl lg:text-5xl font-bold ml-4 font-sedan">Experience Kuwait Cultural Charm</h2>
+                        </Zoom>
                         <p className="font-roboto text-[12px] md:text-xl lg:text-2xl font-bold ml-2 lg:ml-0 md:ml-0">Immerse yourself in Kuwait rich history and bustling markets</p>
                     </div>
 
@@ -47,7 +53,9 @@ const Banner = () => {
                     <img src={banner3} className="w-full lg:h-[630px]" />
 
                     <div className="absolute inset-0 flex flex-col justify-center items-center text-white md:gap-4 lg:gap-8">
-                        <h2 className="text-xl md:text-4xl lg:text-5xl font-bold ml-4 font-sedan">Journey Through the Heart of Qatar</h2>
+                        <Zoom>
+                            <h2 className="text-xl md:text-4xl lg:text-5xl font-bold ml-4 font-sedan">Journey Through the Heart of Qatar</h2>
+                        </Zoom>
                         <p className="font-roboto text-center text-[12px] md:text-xl lg:text-2xl font-bold ml-2 lg:ml-0 md:ml-0">Embark on an unforgettable adventure through Qatar modern marvels</p>
                     </div>
 
@@ -63,7 +71,9 @@ const Banner = () => {
                     <img src={banner4} className="w-full lg:h-[630px]" />
 
                     <div className="absolute inset-0 flex flex-col justify-center items-center text-white md:gap-4 lg:gap-8">
-                        <h2 className="text-xl md:text-4xl lg:text-5xl font-bold ml-4 font-sedan">Explore the Majesty of Saudi Arabia</h2>
+                        <Zoom>
+                            <h2 className="text-xl md:text-4xl lg:text-5xl font-bold ml-4 font-sedan">Explore the Majesty of Saudi Arabia</h2>
+                        </Zoom>
                         <p className="font-roboto text-center text-[12px] md:text-xl lg:text-2xl font-bold ml-2 lg:ml-0 md:ml-0">Discover Saudi Arabs diverse landscapes, rich heritage, and legendary hospitality</p>
                     </div>
 
@@ -79,7 +89,9 @@ const Banner = () => {
                     <img src={banner5} className="w-full lg:h-[630px]" />
 
                     <div className="absolute inset-0 flex flex-col justify-center items-center text-white md:gap-4 lg:gap-8">
-                        <h2 className="text-xl md:text-4xl lg:text-5xl font-bold ml-4 font-sedan">Discover the Mystique of Jordan</h2>
+                        <Zoom>
+                            <h2 className="text-xl md:text-4xl lg:text-5xl font-bold ml-4 font-sedan">Discover the Mystique of Jordan</h2>
+                        </Zoom>
                         <p className="font-roboto text-center text-[12px] md:text-xl lg:text-2xl font-bold ml-2 lg:ml-0 md:ml-0">Uncover ancient wonders, natural beauty, and timeless heritage in Jordan</p>
                     </div>
 
@@ -95,7 +107,9 @@ const Banner = () => {
                     <img src={banner6} className="w-full lg:h-[630px]" />
 
                     <div className="absolute inset-0 flex flex-col justify-center items-center text-white md:gap-4 lg:gap-8">
-                        <h2 className="text-xl md:text-4xl lg:text-5xl font-bold ml-4 font-sedan">Experience the Allure of Iran</h2>
+                        <Zoom>
+                            <h2 className="text-xl md:text-4xl lg:text-5xl font-bold ml-4 font-sedan">Experience the Allure of Iran</h2>
+                        </Zoom>
                         <p className="font-roboto text-center text-[12px] md:text-xl lg:text-2xl font-bold ml-2 lg:ml-0 md:ml-0">Indulge in Iran rich history, vibrant culture, and breathtaking landscapes</p>
                     </div>
 

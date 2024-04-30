@@ -2,6 +2,8 @@ import { Helmet } from "react-helmet-async";
 import pics1 from '../../assets/images/about1.webp';
 import pics2 from '../../assets/images/about2.jpg';
 import pics3 from '../../assets/images/about3.jpg';
+import { Roll } from "react-awesome-reveal";
+
 
 
 const AboutUs = () => {
@@ -17,7 +19,9 @@ const AboutUs = () => {
                     <div className="hero-overlay bg-opacity-30"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="">
-                        <h2 className="text-4xl md:text-7xl lg:text-7xl font-sedan font-semibold lg:p-4 text-black">About Us</h2>
+                      <Roll>
+                      <h2 className="text-4xl md:text-7xl lg:text-8xl font-sedan font-semibold lg:p-4 text-black">About Us</h2>
+                      </Roll>
                         </div>
                     </div>
                 </div>

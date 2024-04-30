@@ -1,6 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 import contact1 from '../../assets/images/contact1.jpg'
 import contact2 from '../../assets/images/contact2.jpeg'
+import { Roll } from "react-awesome-reveal";
+
 
 const Contact = () => {
     return (
@@ -16,7 +18,9 @@ const Contact = () => {
                     <div className="hero-overlay bg-opacity-30"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="">
-                            <h2 className="text-4xl md:text-7xl lg:text-7xl font-sedan font-semibold lg:p-4 text-black">Contact Us</h2>
+                            <Roll>
+                                <h2 className="text-4xl md:text-7xl lg:text-8xl font-sedan font-semibold lg:p-4 text-black">Contact Us</h2>
+                            </Roll>
                         </div>
                     </div>
                 </div>
