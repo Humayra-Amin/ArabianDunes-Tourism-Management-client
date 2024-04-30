@@ -5,7 +5,6 @@ import pics3 from '../../assets/images/about3.jpg';
 import { Roll } from "react-awesome-reveal";
 
 
-
 const AboutUs = () => {
     return (
         <div style={{ background: 'linear-gradient(to bottom right, #FFFFFF, #FFFCB3)' }}>

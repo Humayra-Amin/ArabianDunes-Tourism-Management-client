@@ -27,7 +27,7 @@ const UpdateSpot = () => {
         const updatedSpot = { name, email, country_Name, tourists_spot_name, location, short_description, average_cost, seasonality, travel_time, totalVisitorsPerYear, image }
         console.log(updatedSpot)
 
-        fetch(`http://localhost:5000/tours/${_id}`, {
+        fetch(`https://tourism-a10-server.vercel.app/tours/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

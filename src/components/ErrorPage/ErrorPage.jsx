@@ -10,7 +10,6 @@ const ErrorPage = () => {
                 <p>The page you are looking for may have been removed, deleted or possibly never existed......</p>
             </div>
             <div className='ml-[70px] mt-10 md:ml-[220px] md:mt-10 lg:ml-[550px] lg:mt-20'>
-                {/* <img src={error} alt="" className='w-[200px] md:w-[250px] lg:w-[300px]' /> */}
                 <Lottie animationData={error} className='w-[200px] md:w-[250px] lg:w-[300px]'></Lottie>
             </div>
             <div>

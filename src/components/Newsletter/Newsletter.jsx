@@ -1,5 +1,3 @@
-// import new1 from '../../assets/images/new1.png';
-// import new2 from '../../assets/images/new2.png';
 
 const Newsletter = () => {
     return (
@@ -19,17 +17,6 @@ const Newsletter = () => {
                             <button className="btn bg-amber-500 text-black font-bold text-xl font-sedan">Subscribe</button>
                         </label>
 
-                        {/* <div className='flex flex-col lg:flex-row justify-evenly'>
-                            <div className='border-2 border-amber-500 w-[150px] h-[190px] lg:w-[350px] lg:h-[300px] hover:bg-slate-400 hover:cursor-pointer'>
-                                <img src={new2} alt="" className='h-[90px] lg:h-[150px] ml-8 lg:ml-24' />
-                                <h1 className="text-2xl lg:text-5xl font-bold text-black">100+ <br></br><span className='lg:text-4xl'>Awesome Tour</span></h1>
-                            </div>
-
-                            <div className='border-2 border-amber-500 w-[150px] h-[190px] lg:w-[350px] lg:h-[300px] hover:bg-slate-400 hover:cursor-pointer'>
-                                <img src={new1} alt="" className='h-[80px] lg:h-[130px] ml-8 mt-2 lg:ml-24 lg:mt-6' />
-                                <h1 className="text-2xl lg:text-5xl font-bold text-black">200+ <br></br><span className='lg:text-4xl'>New Destination</span></h1>
-                            </div>
-                        </div> */}
                     </div>
 
                 </div>

@@ -17,7 +17,7 @@ const MyListTable = ({ tours, allTour, setAllTour }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/tours/${_id}`, {
+                fetch(`https://tourism-a10-server.vercel.app/tours/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

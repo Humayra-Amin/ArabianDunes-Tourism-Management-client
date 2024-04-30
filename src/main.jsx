@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/tours')
+        loader: () => fetch('https://tourism-a10-server.vercel.app/tours')
       },
       {
         path: '/addSpot',
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
         element: <ProtectedRoute>
           <UpdateSpot></UpdateSpot>,
         </ProtectedRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/tours/${params._id}`)
+        loader: ({params}) => fetch(`https://tourism-a10-server.vercel.app/tours/${params._id}`)
       },
       {
         path: '/login',
@@ -66,21 +66,21 @@ const router = createBrowserRouter([
       {
         path: '/allSpot',
         element: <AllSpot></AllSpot>,
-        loader: () => fetch('http://localhost:5000/tours')
+        loader: () => fetch('https://tourism-a10-server.vercel.app/tours')
       },
       {
         path: '/list/:email',
         element: <ProtectedRoute>
           <MyList></MyList>,
         </ProtectedRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/myTour/${params.email}`)
+        loader: ({params}) => fetch(`https://tourism-a10-server.vercel.app/myTour/${params.email}`)
       },
       {
         path: '/tours/:_id',
         element: <ProtectedRoute>
           <SpotDetails></SpotDetails>,
         </ProtectedRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/tours/${params._id}`)
+        loader: ({params}) => fetch(`https://tourism-a10-server.vercel.app/tours/${params._id}`)
       },
       {
         path: '/userprofile',

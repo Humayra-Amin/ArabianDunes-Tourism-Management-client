@@ -3,7 +3,7 @@
 
 # Live Site URL
 - firebase url(client): https://tourism-a10-client.web.app/
-- vercel url(server): https://tourism-a10-server.vercel.app/
+- vercel url(server): https://tourism-a10-server.vercel.app
 
 # Features
 - Discover Exotic Destinations: Explore a curated list of exotic tourist spots around the world.
