@@ -50,15 +50,15 @@ const UpdateSpot = () => {
 
 
     return (
-        <div>
+        <div style={{ background: 'linear-gradient(to bottom right, #FFFFFF, #FFFCB3)' }}>
             <Helmet>
                 <title>ArabianDunes | Update Spot</title>
                 <link rel="icon" type="image/jpg" href="/src/assets/images/logos.jpg" />
             </Helmet>
 
-            <div className="bg-[#F4F3F0] p-10">
+            <div className="p-10">
                 <h2 className="text-5xl font-bold font-sedan mb-10 text-center">Update Tourist Spot</h2>
-                <form onSubmit={handleUpdateSpot} className="border-2 border-amber-600 p-14 bg-white shadow-xl rounded-xl">
+                <form onSubmit={handleUpdateSpot} className="border-2 border-amber-600 p-14 bg-amber-200 shadow-xl rounded-xl">
 
 
                     {/* Row 1 */}

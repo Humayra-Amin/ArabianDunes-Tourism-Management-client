@@ -17,13 +17,11 @@ const MyList = () => {
       <h1 className="mt-10 text-5xl font-sedan text-center">My List</h1>
 
       <div className="overflow-x-auto mt-14">
-        <table className="table table-xs md:table-md lg:table-lg">
-          <thead>
+        <table className="table table-xs md:table-md lg:table-lg border-amber-500 bg-amber-200">
+          <thead className="text-xs md:text-[14px] lg:text-xl text-center">
             <tr>
-              <th>Country</th>
               <th>Tourist Spot</th>
               <th>Travel Time</th>
-              <th>Seasonality</th>
               <th>Average Cost</th>
               <th></th>
               <th></th>

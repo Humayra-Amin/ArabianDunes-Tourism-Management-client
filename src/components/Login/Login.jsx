@@ -55,7 +55,7 @@ const Login = () => {
             </Helmet>
             <div className="hero min-h-screen">
                 <div className="hero-content">
-                    <div className="card shrink-0 mb-14 md:w-[500px] lg:w-[500px] border-2 bg-base-100 shadow-xl">
+                    <div className="card shrink-0 mb-14 md:w-[500px] lg:w-[500px] border-2 bg-amber-200 border-amber-400 shadow-xl">
 
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
 
@@ -101,7 +101,7 @@ const Login = () => {
 
 
                             <div className="form-control mt-6">
-                                <button className="btn bg-[#FACF39] text-black text-xl hover:bg-gray-200 hover:text-black hover:border-[#FACF39]">Login</button>
+                                <button className="btn bg-[#FACF39] border-amber-400 text-black text-xl hover:bg-gray-100 hover:text-black hover:border-[#FACF39]">Login</button>
                             </div>
 
 

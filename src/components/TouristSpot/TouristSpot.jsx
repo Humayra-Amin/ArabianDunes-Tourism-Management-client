@@ -34,8 +34,6 @@ const TouristSpot = ({ tours }) => {
                         <button className="btn bg-[#FACF39] text-black border-amber-500 hover:bg-white hover:text-black hover:border-amber-300">View Details</button>
                     </Link>
 
-
-
                 </div>
             </div>
         </div>

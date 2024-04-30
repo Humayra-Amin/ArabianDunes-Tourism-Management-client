@@ -5,6 +5,8 @@ import { FaEnvelope, FaEye, FaEyeSlash, FaLink, FaLock, FaUser } from "react-ico
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
 
@@ -47,7 +49,7 @@ const Register = () => {
             .then(() => {
                 updateUserProfile(fullname, imageURL)
                     .then(() => {
-                        setSuccess('User created successfully')
+                        toast.success('User created successfully!!!')
                         setTimeout(() => {
                             navigate(from);
                         }, 1000);
@@ -57,7 +59,7 @@ const Register = () => {
             })
             .catch((error) => {
                 console.error(error);
-                setRegisterError('Email already exist');
+                toast.error("Email already exist!!!");
             })
     }
 
@@ -72,7 +74,7 @@ const Register = () => {
 
             <div className="hero min-h-screen">
                 <div className="hero-content">
-                    <div className="card shrink-0 mb-14 md:w-[500px] lg:w-[500px] border-2 bg-base-100">
+                    <div className="card shrink-0 mb-14 md:w-[500px] lg:w-[500px] border-2 bg-amber-200 border-amber-400">
 
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
 
@@ -83,7 +85,7 @@ const Register = () => {
                             {
                                 success && <p className="text-green-500 flex justify-center font-sedan">{success}</p>
                             }
-                            
+
                             <h1 className="flex justify-center text-xl lg:text-5xl font-sedan text-black">Register</h1>
 
                             <div className="form-control">
@@ -159,7 +161,7 @@ const Register = () => {
 
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn bg-[#FACF39] text-black text-xl hover:bg-gray-200 hover:text-black hover:border-[#FACF39]">Register</button>
+                                <button className="btn bg-[#FACF39] text-black text-xl border-amber-400 hover:bg-gray-100 hover:text-black hover:border-[#FACF39]">Register</button>
                             </div>
 
                             <label className="label text-[16px] font-medium text-gray-400">
@@ -175,7 +177,7 @@ const Register = () => {
                 </div>
 
             </div>
-
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

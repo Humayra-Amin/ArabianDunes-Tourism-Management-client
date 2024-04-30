@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 
 const MyListTable = ({ tours, allTour, setAllTour }) => {
 
-    const { _id, average_cost, seasonality, country_Name, tourists_spot_name, travel_time } = tours;
+    const { _id, average_cost, tourists_spot_name, travel_time } = tours;
 
     const handleDelete = _id => {
         console.log(_id);
@@ -36,19 +36,16 @@ const MyListTable = ({ tours, allTour, setAllTour }) => {
             }
         });
     }
-
     return (
-        <tr>
-            <td>{country_Name}</td>
+        <tr className="text-xs md:text-[14px] lg:text-xl text-center">
             <td>{tourists_spot_name}</td>
             <td>{travel_time}</td>
-            <td>{seasonality}</td>
             <td>{average_cost}</td>
             <td>
-                <Link to={`/updateSpot/${_id}`}><button className='btn bg-amber-400'>update</button></Link>
+                <Link to={`/updateSpot/${_id}`}><button className='btn bg-amber-400 border-amber-400 w-[50px] md:w-auto lg:w-auto font-semibold'>Update</button></Link>
             </td>
             <td>
-                <button onClick={() => handleDelete(_id)} className="btn bg-red-500 text-white">Delete</button>
+                <button onClick={() => handleDelete(_id)} className="btn bg-red-500 border-red-500 text-white w-[50px] md:w-auto lg:w-auto font-semibold">Delete</button>
             </td>
         </tr>
     );

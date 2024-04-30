@@ -49,7 +49,7 @@ const UserProfile = () => {
 
                 {loggedIn ? (
 
-                    <div className="card bg-base-100 shadow-xl border-2 lg:w-[600px] lg:ml-[300px]">
+                    <div className="card border-2 border-amber-600 bg-amber-200 mt-4 shadow-xl lg:w-[600px] lg:ml-[300px]">
                         <figure className="px-8 pt-8">
                             <img src={userImage} alt="" className="rounded-xl w-[200px]" />
                         </figure>
