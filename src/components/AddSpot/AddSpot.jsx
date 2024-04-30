@@ -24,6 +24,27 @@ const AddSpot = () => {
         const totalVisitorsPerYear = form.totalVisitorsPerYear.value;
         const image = form.image.value;
 
+        if (
+            !country_Name ||
+            !tourists_spot_name ||
+            !location ||
+            !short_description ||
+            !average_cost ||
+            !seasonality ||
+            !travel_time ||
+            !totalVisitorsPerYear ||
+            !image
+        ) {
+            Swal.fire({
+                title: 'Error',
+                text: 'Please fill out all the fields',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+            return;
+        }
+
+
         const newSpot = { name, email, country_Name, tourists_spot_name, location, short_description, average_cost, seasonality, travel_time, totalVisitorsPerYear, image }
         console.log(newSpot)
 
@@ -40,7 +61,7 @@ const AddSpot = () => {
                 if (data.insertedId) {
                     Swal.fire({
                         title: 'Success',
-                        text: 'Added the Tourist Spot Successfully',
+                        text: `${tourists_spot_name} Added Successfully`,
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
@@ -60,6 +81,30 @@ const AddSpot = () => {
                 <h2 className="text-5xl font-bold font-sedan mb-10 text-center">Add Tourist Spot</h2>
                 <form onSubmit={handleAddSpot} className="border-2 border-amber-600 p-14 bg-amber-200 shadow-xl rounded-xl">
 
+
+                    {/* Row 1 */}
+
+                    <div className="md:flex mb-8 gap-5">
+
+                    <div className="form-control md:w-1/2">
+                            <label className="label">
+                                <span className="label-text">Name</span>
+                            </label>
+                            <label className="input-group">
+                                <input type="text" name="name" defaultValue={user?.displayName}  placeholder="Name" className="input input-bordered w-full" />
+                            </label>
+                        </div>
+
+                        <div className="form-control md:w-1/2">
+                            <label className="label">
+                                <span className="label-text">Email</span>
+                            </label>
+                            <label className="input-group">
+                                <input type="text" name="email" defaultValue={user?.email}  placeholder="Email" className="input input-bordered w-full" />
+                            </label>
+                        </div>
+
+                    </div>
 
                     {/* Row 1 */}
 

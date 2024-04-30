@@ -24,6 +24,26 @@ const UpdateSpot = () => {
         const totalVisitorsPerYear = form.totalVisitorsPerYear.value;
         const image = form.image.value;
 
+        if (
+            !country_Name ||
+            !tourists_spot_name ||
+            !location ||
+            !short_description ||
+            !average_cost ||
+            !seasonality ||
+            !travel_time ||
+            !totalVisitorsPerYear ||
+            !image
+        ) {
+            Swal.fire({
+                title: 'Error',
+                text: 'Update fields',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+            return;
+        }
+
         const updatedSpot = { name, email, country_Name, tourists_spot_name, location, short_description, average_cost, seasonality, travel_time, totalVisitorsPerYear, image }
         console.log(updatedSpot)
 
@@ -60,6 +80,28 @@ const UpdateSpot = () => {
                 <h2 className="text-5xl font-bold font-sedan mb-10 text-center">Update Tourist Spot</h2>
                 <form onSubmit={handleUpdateSpot} className="border-2 border-amber-600 p-14 bg-amber-200 shadow-xl rounded-xl">
 
+
+                    <div className="md:flex mb-8 gap-5">
+
+                        <div className="form-control md:w-1/2">
+                            <label className="label">
+                                <span className="label-text">Name</span>
+                            </label>
+                            <label className="input-group">
+                                <input type="text" name="name" defaultValue={name} placeholder="Name" className="input input-bordered w-full" />
+                            </label>
+                        </div>
+
+                        <div className="form-control md:w-1/2">
+                            <label className="label">
+                                <span className="label-text">Email</span>
+                            </label>
+                            <label className="input-group">
+                                <input type="text" name="email" defaultValue={email}  placeholder="Email" className="input input-bordered w-full" />
+                            </label>
+                        </div>
+
+                    </div>
 
                     {/* Row 1 */}
                     <div className="md:flex mb-8 gap-5">
@@ -109,7 +151,7 @@ const UpdateSpot = () => {
                                 <span className="label-text">Short Description</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="short_description" defaultValue={short_description}placeholder="Short Description" className="input input-bordered w-full" />
+                                <input type="text" name="short_description" defaultValue={short_description} placeholder="Short Description" className="input input-bordered w-full" />
                             </label>
                         </div>
 
@@ -155,7 +197,7 @@ const UpdateSpot = () => {
                                 <span className="label-text">Total Visitors Per Year</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="totalVisitorsPerYear" defaultValue={totalVisitorsPerYear}placeholder="Total Visitors Per Year" className="input input-bordered w-full" />
+                                <input type="text" name="totalVisitorsPerYear" defaultValue={totalVisitorsPerYear} placeholder="Total Visitors Per Year" className="input input-bordered w-full" />
                             </label>
                         </div>
 
