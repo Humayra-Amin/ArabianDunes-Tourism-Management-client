@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import logout from "../../assets/images/logout.png"
+import Lottie from "lottie-react";
+import logout from "../../assets/LOGOUT.json"
 
 const UserProfile = () => {
 
@@ -61,12 +62,12 @@ const UserProfile = () => {
 
                 ) : (
 
-                    <div className="border-2 border-amber-600 bg-amber-200 lg:p-6 mt-6 lg:w-[500px] lg:ml-[330px]">
+                    <div className="border-2 border-amber-600 bg-amber-200 rounded-lg shadow-lg lg:p-6 mt-6 lg:w-[500px] lg:ml-[330px]">
                         
                         <h1 className="font-sedan text-2xl text-black">You have been logged out</h1>
                         <p className="text-slate-400">Please login</p>
 
-                        <img src={logout} alt="" className="h-[150px] ml-[100px] md:h-[200px] md:ml-[250px] lg:h-[200px] lg:ml-[150px]" />
+                        <Lottie animationData={logout} className="h-[150px] ml-[100px] md:h-[200px] md:ml-[250px] lg:h-[250px] lg:ml-[100px]"></Lottie>
                        
                         <div>
 
