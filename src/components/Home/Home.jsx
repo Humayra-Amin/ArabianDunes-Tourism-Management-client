@@ -9,7 +9,7 @@ const Home = () => {
     const tour = useLoaderData();
 
     return (
-        <div style={{ background: 'linear-gradient(to bottom right, #FFFFFF, #FFFCB3)' }}>
+        <div style={{ background: 'linear-gradient(to bottom right, #FFFFFF, #FFFCB3)' }} >
 
             <Banner></Banner>
 
@@ -34,7 +34,7 @@ const Home = () => {
                 <title>ArabianDunes | Home</title>
                 <link rel="icon" type="image/jpg" href="/src/assets/images/logos.jpg" />
             </Helmet>
-            
+
         </div>
     );
 };

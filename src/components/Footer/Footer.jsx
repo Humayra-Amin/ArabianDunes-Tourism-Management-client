@@ -26,7 +26,7 @@ const Footer = () => {
     window.addEventListener('scroll', toggleVisible);
 
     return (
-        <div>
+        <div className="">
             <footer className="footer p-20 md:p-8 bg-[#FACF39] text-black mt-10">
                 <aside>
                     <div className="flex-1">
@@ -79,7 +79,7 @@ const Footer = () => {
 
             <footer className="footer px-10 py-4 border-t border-amber-500 bg-[#FACF39] text-base-content flex justify-center items-center">
                 <aside>
-                    <p>Copyright © 2024 - All right reserved by ArabianDunes Tour and Travels</p>
+                    <p className='font-bold text-black'>Copyright © 2024 - All right reserved by ArabianDunes Tour and Travels</p>
                 </aside>
             </footer>
         </div>
