@@ -1,5 +1,6 @@
 # Website Name
 - ArabianDunes Tourism Management
+- This project is about exploring a curated list of exotic middle east country tourist spots.
 
 # Live Site URL
 - firebase url(client): https://tourism-a10-client.web.app/
